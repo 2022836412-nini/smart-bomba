@@ -1,30 +1,20 @@
-
-export interface EsriAttribute {
-  [key: string]: any;
+export interface EsriField {
+  name: string;
+  alias?: string;
+  type: string;
 }
 
 export interface EsriFeature {
-  attributes: EsriAttribute;
-  geometry?: any;
+  attributes: Record<string, any>;
 }
 
 export interface EsriResponse {
+  fields: EsriField[];
   features: EsriFeature[];
-  fields: {
-    name: string;
-    type: string;
-    alias: string;
-  }[];
 }
 
 export interface Message {
   role: 'user' | 'model';
   text: string;
   timestamp: Date;
-}
-
-export interface AnalysisResult {
-  summary: string;
-  counts: Record<string, number>;
-  insights: string[];
 }
