@@ -1,0 +1,6 @@
+
+{
+  "name": "Smart Bomba AI Agent",
+  "description": "An AI-powered dashboard agent that connects to ESRI Feature Services to perform spatial analysis on JBPM safety calls using Gemini Pro.",
+  "requestFramePermissions": []
+}
